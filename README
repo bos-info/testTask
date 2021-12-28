@@ -1,0 +1,19 @@
+Easy Way:
+---------
+1. Download file 4 your OS
+2. Make appropriate rights to file (must be executable)
+3. Run it
+4. Open your preferred web browser and Enter http://IP:8080 of the Server
+5. Have Fun
+---------
+
+The Hardest way:
+----------------
+1. Download main.go
+2. Compile main.go (go build main.go)  or just run(go run main.go)
+3. Check errors and drink some coffee
+4. Open your preferred web browser and Enter http://IP:8080 of the Server
+5. Have Fun
+----------------
+P.S. Port 8080 must be free on your server
+

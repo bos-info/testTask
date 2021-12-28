@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Club</title>
+</head>
+<body>
+<h1 align="center">Welcome to the Club!</h1>
+
+<p><b>New Member</b></p>
+
+<form action="/create" method="POST">
+    <div><p>Name: <input type="search" name="signature" required pattern="[A-Za-z_.]+"></p></div>
+    <div><p>E-Mail: <input type="email" name="email"></p></div>
+    <div><input type="submit"></div>
+</form>
+
+{{if .Error}}<p><b>ERROR: {{.TextError}}</b></p>{{end}}
+<div>
+    <table width="100%" border="1" cellpadding="4">
+        <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>RegistationDate</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>RegistationDate</th>
+        </tr>
+        </tfoot>
+        <tbody>
+        {{range .Member}}
+        <tr>
+            <td align="center">{{.Number}}</td>
+            <td align="center">{{.Signature}}</td>
+            <td align="center">{{.Email}}</td>
+            <td align="center">{{.TimeOfReg}}</td>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
